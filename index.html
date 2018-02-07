@@ -1,9 +1,180 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>Hello github pages.</title>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>gradientor.ai | Pragmatic autonomous driving with modern computer vision</title>
+  <meta name="description" content="description from settings.">
+
+  <link rel="stylesheet" href="/css/main.css">
 </head>
-<body>
-  Hello world!
-</body>
-</html>
+
+  <body>
+      <div id="particles-js">
+  <div class="header">
+      <h1>
+        <span class="site-title">gradientor.ai</span>
+        <span class="site-description">pragmatic autonomous driving</span>
+      </h1>
+      <div class="header-icons">
+        <a aria-label="Send email" href="mailto:inbox@gradientor.ai"><i class="icon fa fa-envelope"></i></a>
+        <a aria-label="Instagram" target="_blank" href="https://www.instagram.com/gradientor_ai/"><i class="icon fa fa-instagram" aria-hidden="true"></i></a>
+        <a aria-label="Twitter" target="_blank" href="https://twitter.com/gradientor_ai"><i class="icon fa fa-twitter" aria-hidden="true"></i></a>
+        <a aria-label="Youtube" target="_blank" href="https://www.youtube.com/channel/UC8HfdYLdlpXyxQtxueDr6cw"><i class="icon fa fa-youtube" aria-hidden="true"></i></a>
+      </div>
+      <!-- coming soon
+      <div class="header-links">
+        <a class="link" href="#about" data-scroll>What We Do</a>
+        <a class="link" href="#projects" data-scroll>See Demos</a>
+        <a class="link" href="#footer" data-scroll>Team</a>
+      </div>
+      -->
+  </div>
+  <a class="down" href="#about" data-scroll><i class="icon fa fa-chevron-down" aria-hidden="true"></i></a>
+</div>
+
+      <section id="about">
+         <div class="user-details">
+  <h1 align="center">What we do</h1>
+  <p> We develop advanced <strong>driver assistance</strong> and
+  <strong>autonomous driving</strong> systems, based on <strong>computer 
+  vision</strong> and <strong>modern machine learning</strong> 
+  techniques. We target the sweet spot between the two extremes:
+  </p>
+  <p>
+  <ul>
+  <li>"Old-school" driver assistance systems, such as active cruise control,
+      or lane keeping assist. These are
+      typically implemented as a set of disparate algorithm-sensor components (
+      active cruise control requires a radar, while lane keeping needs a video
+      camera). This leads to the <strong>high cost of the sensor suite</strong>.
+      More importantly,
+      relying on narrow-purpose sensors makes it very <strong>complex
+      to extend functionality</strong> in ways that require higher level
+      understanding of the environment.
+      </li>
+  <li>Fully autonomous (SAE level 5) solutions. We believe that in the
+      near future, fully autonomous solutions only have potential to succeed in
+      well-developed parts of the "first world". Automating the "last 1%" of human
+      decision making is 
+      <a target="_blank" href="https://spectrum.ieee.org/cars-that-think/transportation/self-driving/have-selfdriving-cars-stopped-getting-better">notoriously difficult</a> by itself, but
+      <strong>an order of magnitude more so in the developing world</strong>. There, road
+      infrastructure is often poor, and the traffic often follows social rules
+      that directly contradict the formal traffic law.</li>
+  </ul>
+  </p>
+  <p>
+  Our approach is to <strong>build around computer vision</strong> for sensing.
+  With <strong>modern machine learning techniques</strong> 
+  (mostly deep learning), it is possible to extract
+  dramatically more high-level information from video compared to legacy
+  deployed approaches. This immediately leads to multiple benefits:
+  <ul>
+    <li><strong>Robustness improvements</strong> to traditional ADAS
+    functionality. See our demo of simulated lane keep assistance system
+    handling a winter road with very little road markings visible.
+    </li>
+    <li>
+    Vehicle <strong>sensor suite can be simplified</strong>. Blind spot
+    monitoring reusing panoramic video instead of separate sonars is but one
+    example.
+    </li>
+    <li>
+    Most importantly, having high-quality vision data makes it much easier to
+    <strong>extend the assistance systems functionality</strong> purely in
+    software, gradually <strong>increasing the autonomy level</strong>.
+    </li>
+  </ul>
+  </p>
+
+<!--
+</div>
+  <div class="user">
+    <div class="tech">
+      <h2>Design</h2>
+      <i class="devicon-html5-plain-wordmark"></i>
+      <i class="devicon-bootstrap-plain-wordmark colored"></i>
+      <i class="devicon-sass-original colored"></i>
+      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
+        Vinyl XOXO lumbersexual</p>
+    </div>
+    <div class="tech">
+      <h2>Code</h2>
+      <i class="devicon-javascript-plain colored"></i>
+      <i class="devicon-react-original-wordmark colored"></i>
+      <i class="devicon-nodejs-plain-wordmark"></i>
+      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
+        Vinyl XOXO lumbersexual</p>
+    </div>
+    <div class="tech">
+      <h2>Tools</h2>
+      <i class="devicon-git-plain"></i>
+      <i class="devicon-gulp-plain colored"></i>
+      <i class="devicon-atom-original-wordmark"></i>
+      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
+        Vinyl XOXO lumbersexual</p>
+    </div>
+</div>
+-->
+
+      </section>
+      <section id="projects">
+        <div class="user-details">
+  <h1 align="center"> Demos </h1>
+<div class="user-projects">
+  <h3>Steering from Video</h3>
+  <div class="images-right">
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/yTUo-biNPG4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="contents">
+    <p>Advanced steering assistance logic, implemented as a neural net trained
+       directly on video frames from the forward camera.</p>
+      
+    <p>Here, modern machine learning allowed us to dramatically improve
+      robustness and broaden the range of acceptable conditions for the driver
+      asisst system. Unlike legacy systems, commercially available today, our
+      solution does not depend on lane markings and easily handles twisty roads.
+    </p>
+  </div>
+</div>
+<div class="user-projects">
+  <h3>Motion Capture with Commodity Hardware</h3>
+  <div class="images-left">
+    <iframe width="400" height="225" src="https://www.youtube.com/embed/HvfqpzvW2E8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="contents-right">
+    <p>Training data is the crucial factor that determines the accuracy
+      of machine learning systems. No algorithmic improvements can fully
+      compensate for training data that is not plentiful or accurate enough.
+    </p>
+    
+    <p>
+      We have developed a self-contained motion capture system, running on
+      commodity Android platform for <strong>low-cost training data collection</strong>.
+      The platform is <strong>completely self-contained and does not need any link
+      to the vehicle data bus</strong> - our software extracts steering and velocity
+      information directly from the Android device IMU and GPS sensors. The
+      result is a system that can be deployed with 
+      <strong>zero setup cost</strong> on <strong>any vehicle</strong>.      
+    </p>
+    
+    <p>
+      We have <strong>validated the results</strong> against the data directly from the
+      vehicle CAN bus and observed a <strong>near-perfect agreement</strong>.
+    </p>
+  </div>
+</div>
+</div>
+
+      </section>
+        
+      <footer class="footer">
+    <p>inbox@gradientor.ai</p>
+</footer>
+<script src="/assets/js/sweet-scroll.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+  </body>
