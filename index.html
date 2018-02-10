@@ -136,9 +136,12 @@
         </p>
       </div>
       <div class="projects-images">
-        <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yTUo-biNPG4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="youtube" data-embed="yTUo-biNPG4"> 
+          <div class="play-button"></div> 
         </div>
+        <!-- <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/yTUo-biNPG4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
       </div>
     </div>
   </div>
@@ -146,9 +149,12 @@
     <h3>Motion Capture with Commodity Hardware</h3>
     <div class="projects-container-video-left">
       <div class="projects-images">
-        <div class="video-container">
-          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HvfqpzvW2E8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div class="youtube" data-embed="HvfqpzvW2E8"> 
+          <div class="play-button"></div> 
         </div>
+        <!-- <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HvfqpzvW2E8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div> -->
       </div>
       <div class="projects-contents">
         <p>Training data is the crucial factor that determines the accuracy
@@ -181,5 +187,24 @@
     <p>inbox@gradientor.ai</p>
 </footer>
 
-
   </body>
+<script>// YT lazyload snippet from https://webdesign.tutsplus.com/tutorials/how-to-lazy-load-embedded-youtube-videos--cms-26743
+var youtube = document.querySelectorAll( ".youtube" );
+for (var i = 0; i < youtube.length; i++) {
+  var source = "https://img.youtube.com/vi/"+ youtube[i].dataset.embed +"/sddefault.jpg"; 
+  var image = new Image();
+  image.src = source;
+  image.addEventListener( "load", function() {
+      youtube[ i ].appendChild( image );
+  }( i ) );
+  youtube[i].addEventListener( "click", function() {
+ 
+  var iframe = document.createElement( "iframe" );
+    iframe.setAttribute( "frameborder", "0" );
+    iframe.setAttribute( "allowfullscreen", "" );
+    iframe.setAttribute( "src", "https://www.youtube-nocookie.com/embed/"+ this.dataset.embed +"?rel=0&showinfo=0&autoplay=1" );
+    this.innerHTML = "";
+    this.appendChild( iframe );
+  } );
+}
+</script>
